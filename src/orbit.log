@@ -1,0 +1,10 @@
+Tue Sep 19 01:56:18 3099: InitLog()
+Tue Sep 19 01:56:18 3099: InitStuff: ORBIT Version 1.01
+Tue Sep 19 01:56:18 3099: OpenWindow: OpenGL vendor: Mesa Project
+Tue Sep 19 01:56:18 3099: OpenWindow: OpenGL renderer: Software Rasterizer
+Tue Sep 19 01:56:18 3099: OpenWindow: OpenGL version: 2.1 Mesa 7.7.1
+Tue Sep 19 01:56:18 3099: RandomPlanets: Randomizing planets
+Tue Sep 19 01:56:18 3099: ResetPlanets: resetting planets
+Tue Sep 19 01:56:18 3099: ReadPlanetTexture: Reading texture file mercury.ppm
+Tue Sep 19 01:56:18 3099: ReadPlanetTexture: Can't open mercury.ppm
+Tue Sep 19 01:56:18 3099: CloseLog()

@@ -1,0 +1,2097 @@
+<html>
+<head>
+<title>ORBIT Documentation</title>
+</head>
+
+<!--
+ORBIT, a freeware space combat simulator
+Copyright (C) 1999  Steve Belczyk <steve1@genesis.nred.ma.us>
+
+This program and its documentation are free; you can redistribute it
+and/or modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+-->
+
+<body bgcolor=#ffffff>
+<center>
+<h2>ORBIT Documentation</h2>
+<p>
+<hr>
+<a href=index.html>Home</a> |
+<a href=index.html#overview>Overview</a> |
+<a href=index.html#require>System Requirements</a> |
+<a href=documentation.html>Documentation</a> |
+<a href=index.html#contact>Contact Me</a> | 
+<a href=index.html#credits>Credits</a>
+<hr>
+<p>
+
+</center>
+
+<ul>
+<li>	<a href=#1>Introduction</a>
+<li>	<a href=#2>Installation</a>
+
+<ul>
+<li>		<a href=#2.1>Windows</a>
+<li>		<a href=#2.2>Linux</a>
+</ul>
+
+<li>	<a href=#3>Getting Started</a>
+<li>	<a href=#4>Keyboard commands</a>
+<li>	<a href=#5>Heads Up Display</a>
+<li>	<a href=#6>Weapons</a>
+<li>	<a href=#6a>Shields</a>
+<li>	<a href=#8>The Preferences file</a>
+<li>	<a href=#8a>The Log file</a>
+<li>	<a href=#8b>Network Play</a>
+<li>	<a href=#9>The Mission file</a>
+
+<ul>
+<li>		<a href=#9.1>Introduction</a>
+<li>		<a href=#9.2>Format</a>
+<li>		<a href=#9.3>Cursor</a>
+<li>		<a href=#9.4>Player</a>
+<li>		<a href=#9.5>Object</a>
+
+<ul>
+<li>			<a href=#9.5.1>Name</a>
+<li>			<a href=#9.5.2>Model</a>
+<li>			<a href=#9.5.3>Score</a>
+<li>			<a href=#9.5.4>Strategy</a>
+<li>			<a href=#9.5.5>Hidden</a>
+<li>			<a href=#9.5.6>Weapon</a>
+<li>			<a href=#9.5.7>Friendly</a>
+<li>			<a href=#9.5.8>MaxShields</a>
+<li>			<a href=#9.5.9>ShieldRegen</a>
+<li>			<a href=#9.5.10>TurnRate</a>
+<li>			<a href=#9.5.11>Speed</a>
+<li>			<a href=#9.5.12>Invisible</a>
+</ul>
+
+<li>		<a href=#9.6>Briefing</a>
+<li>		<a href=#9.8>Verbose</a>
+<li>		<a href=#9.9>Terse</a>
+<li>		<a href=#9.10>Event</a>
+
+<ul>
+<li>			<a href=#9.10.1>Name</a>
+<li>			<a href=#9.10.2>Trigger</a>
+
+<ul>
+<li>				<a href=#9.10.2.1>Approach</a>
+<li>				<a href=#9.10.2.2>Depart</a>
+<li>				<a href=#9.10.2.3>True</a>
+<li>				<a href=#9.10.2.4>Score</a>
+<li>				<a href=#9.10.2.5>Destroy</a>
+<li>				<a href=#9.10.2.6>Alarm</a>
+<li>				<a href=#9.10.2.7>StopNear</a>
+<li>				<a href=#9.10.2.8>Shields</a>
+</ul>
+
+<li>			<a href=#9.10.3>Action</a>
+
+<ul>
+<li>				<a href=#9.10.3.1>Message</a>
+<li>				<a href=#9.10.3.2>Hide</a>
+<li>				<a href=#9.10.3.3>Unhide</a>
+<li>				<a href=#9.10.3.4>Destroy</a>
+<li>				<a href=#9.10.3.5>Score</a>
+<li>				<a href=#9.10.3.6>Enable</a>
+<li>				<a href=#9.10.3.7>Disable</a>
+<li>				<a href=#9.10.3.8>Stop</a>
+<li>				<a href=#9.10.3.9>LoadMission</a>
+<li>				<a href=#9.10.3.10>Boom</a>
+<li>				<a href=#9.10.3.11>Flash</a>
+<li>				<a href=#9.10.3.12>MoveObject</a>
+<li>				<a href=#9.10.3.13>MovePlayer</a>
+<li>				<a href=#9.10.3.14>MovePlanet</a>
+<li>				<a href=#9.10.3.15>HidePlanet</a>
+<li>				<a href=#9.10.3.16>UnhidePlanet</a>
+<li>				<a href=#9.10.3.17>Betray</a>
+</ul>
+<li>			<a href=#9.10.4>Value</a>
+<li>			<a href=#9.10.5>Enabled</a>
+<li>			<a href=#9.10.6>Disabled</a>
+</ul>
+
+<li>		<a href=#9.11>Planet</a>
+
+<ul>
+<li>			<a href=#9.11.1>Name</a>
+<li>			<a href=#9.11.2>NewName</a>
+<li>			<a href=#9.11.3>Reposition</a>
+<li>			<a href=#9.11.4>Hidden</a>
+<li>			<a href=#9.11.5>Map</a>
+<li>			<a href=#9.11.6>Oblicity</a>
+<li>			<a href=#9.11.7>Radius</a>
+</ul>
+
+<li>		<a href=#9.12>Weapon</a>
+
+<ul>
+<li>			<a href=#9.12.1>Index</a>
+<li>			<a href=#9.12.2>Name</a>
+<li>			<a href=#9.12.3>Speed</a>
+<li>			<a href=#9.12.4>Yield</a>
+<li>			<a href=#9.12.5>Idle</a>
+<li>			<a href=#9.12.6>Expire</a>
+<li>			<a href=#9.12.7>Renderer</a>
+<li>			<a href=#9.12.8>Color</a>
+</ul>
+
+<li>		<a href=#9.13>Include</a>
+<li>		<a href=#9.14>Waypoint</a>
+
+</ul>
+
+<li>	<a href=#10>Adding new models</a>
+</ul>
+
+<a name=1>
+<h2>Introduction</h2>
+<p>
+ORBIT is a Space Combat Simulator.  If you've ever played the Wing
+Commander games, the X-Wing or TIE fighter games, Descent Freespace, or
+any of many other such games, you're already familiar with the basic
+idea:  You must fly around space destroying enemies.
+<p>
+ORBIT is a bit different from these other games in these ways:
+<ul>
+<li>You are defending our very own Solar System, not some distant
+    star system.
+<li>The default flight model is based on Newtonian mechanics, not an
+    arcade model as used in most other games.  (An arcade flight model
+    is also provided.)
+<li>The game is very extensible; you can easily create new missions
+    and spacecraft of your own design and add them to the game.  You
+    can modify any of the pre-written missions.  You can create entire
+    campaigns if you like, just by editing text files.  And you can
+    alter the appearance, size, and position of the planets to create
+    your own solar system.
+<li>The full source code for the game is included in the distribution
+    so, if you are a programmer, you can modify or extend the game in
+    any way.
+</ul>
+
+<p>
+<a name=2>
+<h2>Installation</h2>
+<p>
+<a name=2.1>
+<h3>Installation under Windows</h3>
+<p>
+<ol>
+<li>Create a directory for ORBIT.  You might use C:\ORBIT
+<li>Unzip the <b>ORBIT.ZIP</b> file into the directory you created.
+    <b>Be sure to use a zip program that understands long file names
+    and creates subdirectories.</b>  <a href=www.winzip.com>WINZIP</a>
+    will work fine.
+<li>Double-click on the ORBIT icon to start the game.
+<li>If you like, you can drag the ORBIT icon to your desktop to
+    create a shortcut.
+</ol>
+
+<a name=2.2>
+<h3>Installation under Linux</h3>
+<p>
+<ol>
+<li>Create a directory for ORBIT.  You might use /usr/orbit
+<li>Move the <b>orbit.tar.gz</b> file to the directory you created.
+<li>Change your working directory to the orbit directory.
+<li>Uncompress the file:  <b>gunzip orbit.tar.gz</b>
+<li>Extract the tar file:  <b>tar xvf orbit.tar</b>
+<li>Run the <b>orbit</b> binary to play the game.
+</ol>
+<p>
+
+<a name=3>
+<h2>Getting Started</h2>
+<p>
+When you start the game the first time, you will begin the first
+training mission.  The instructions in the training missions try to give
+you step by step guidance, but it might be useful to be aware of some of
+the most commonly-used command keys:
+<ul>
+<li>The <b>ESC</b> key or the <b>q</b> key leaves the game.
+<li>Use the <b>joystick</b>, the <b>mouse</b>, or the <b>arrow keys</b>
+    to change the direction your ship is facing.
+<li>Use the <b>fire button</b>, <b>tab key</b>, or <b>left mouse
+    button</b>  to fire your current weapon.
+<li>Use the <b>a</b> key (that's a <i>lower case</i> <b>A</b>) to
+    accelerate in the direction you're facing.
+<li>Use the <b>z</b> key (again, a <i>lower case</i> <b>Z</b>) to
+    decelerate.
+<li>Use the <b>A</b> key (that's an <i>upper case</i> <b>A</b>) to
+    accelerate very quickly (100 times faster than using <b>a</b>).
+<li>Use the <b>Z</b> key (again, an <i>upper case</i> <b>Z</b>) to
+    decelerate very quickly.
+<li>The <b>space key</b> brings you to a complete stop.
+</ul>
+Hopefully that's enough to get you started.  There are many more
+keyboard commands described in the next section.
+
+<a name=4>
+<h2>Keyboard Commands</h2>
+<p>
+Keep in mind that there are upper and lower case command keys.
+In some cases the upper case key performs a different function than the
+same lower case key.  Command keys must be used in the case they are
+shown here.
+<p>
+<ul>
+<li><b>a</b> - Accelerate.  Applies thrust in the direction you are
+    facing.  Since the flight model is based on Newtonian physics,
+    this does not necessarily mean that you will actually move in
+    the direction you accelerate.  If you are already moving in one
+    direction, accelerating in a different direction will alter your
+    course toward the new direction, but it may require much thrust
+    or more clever maneuvering to get where you want to go.  (When
+    using the <i>Arcade Flight Model</i> you always move in the
+    direction you are facing.)
+<li><b>z</b> - Decelerate.  Applies negative thrust in the direction
+    you are facing.
+<li><b>A</b> - Accelerate with 100 times the thrust of <b>a</b>.
+<li><b>Z</b> - Decelerate with 100 times the thrust of <b>z</b>.
+<li><b>space</b> - Stop.  Brings the ship to an immediate, complete
+    stop.
+<li><b>tab</b> - Fire.  Fire the current weapon.
+<li><b>insert</b> - Pitch left.  Rotates the ship to the left, about
+    the current viewing direction.
+<li><b>delete</b> - Pitch right.
+<li><b>arrow keys</b> - Steer the ship.
+<li><b>b</b> - Briefing.  Redisplays the briefing for the current
+    mission.
+<li><b>c</b> - Console.  Redisplays up to ten lines of messages in
+    the message console at the upper left hand corner of the screen.
+<li><b>C</b> - Become Client.  Causes the machine to becone a client
+    in a network game.  The player is prompted for the IP address of
+    the server to connect to.
+<li><b>ctrl-D</b> - Drop client.  Allows the server operator to drop
+    a client connection.  The player is prompted for the number of
+    the client to drop.
+<li><b>e</b> - Sound effects.  Toggles the use of sound in the game.
+<li><b>f</b> - Flight model.  Toggles between the Newtonian model and
+    the Arcade model.
+<li><b>F</b> - Toggles the display of the current frame rate in the
+    lower left-hand corner of the screen.  The frame rate is only
+     displayed when the HUD is also displayed.
+<li><b>g</b> - Gravity.  Toggles the effect of gravity.  If gravity
+    is on, your ship and all missiles will be affected by the mass
+    of nearby planets and moons.  It's fun to turn gravity on and
+    experiment with orbitting planets.
+<li><b>h</b> - HUD.  Toggles the display of the Heads Up Display.
+    The HUD shows useful information such as the Radar and the status
+    of your shields.  The HUD is described in more detail later.
+<li><b>i</b> - Invulnerability.  Toggles invulnerability.  When you
+    are invulnerable you cannot be destroyed, but your shields can
+    still be damaged.
+<li><b>j</b> - Junk.  Toggles the display of space junk.  Space junk
+    can give useful visual cues about your motion.
+<li><b>k</b> - Time compression.  Increases time compression, causing
+    the planets to appear to orbit more quickly.
+<li><b>K</b> - Decreases time compression.
+<li><b>l</b> - Lock type.  Cycles the targetting mechanism from enemies
+    to friendlies to planets.
+<li><b>L</b> - Load game.  Abort the current mission and load one of
+    ten most recently-played missions.
+<li><b>ctrl-L</b> - Load mission by name.  The player is prompted for
+    the name of the mission to load.
+<li><b>m</b> - Message.  Redisplays the last message (shown in orange
+    in the middle of the screen), or clears the current message.
+<li><b>M</b> - Mouse control.  Toggles whether or not the mouse is
+    used to aim the ship.
+<li><b>n</b> - Names.  Toggles the display of planet names and nearby
+    moons and objects.  Very useful for finding your way around.
+<li><b>ctrl-N</b> - Set Name.  Sets the name of the player.
+<li><b>o</b> - Orbits.  Toggles the display of planetary orbits.
+    The orbits of planets are shown in blue and the orbits of moons
+    are shown in cyan (light blue).
+<li><b>O</b> - Orbitting.  Toggles planetary orbital motion.  <b>
+    Important:</b>  Don't use this while playing a mission.  The
+    planets will move from their original locations making it very
+    difficult to find your way around.
+<li><b>p</b> - Pause.  Pauses the game.  You can use Control-P for
+    a "silent pause" which will not cause the "Paused" message on
+    the screen.
+<li><b>P</b> - Print screen.  Takes a snapshot of the current screen
+    and saves it in a file named something like orbitNNN.ppm.  Screen
+    shots are stored in Portable Pixel Map (PPM) format.
+<li><b>q</b> - Quit.  Immediately leave the game.
+<li><b>Q</b> - Quit, no save.  Immediately leave the game but do not
+    update the <b>prefs.txt</b> file.
+<li><b>r</b> - Rings.  Toggles the display of planetary rings.  Rings
+    are pretty, but they can slow down the frame rate of the game.
+<li><b>s</b> - Starfield.  Changes the rendering of the background
+    stars from NONE, to SPARSE, to DENSE.  The dense starfield is
+    pretty but can slow things down.
+<li><b>S</b> - Become Server.  Causes the machine to become an
+    ORBIT server and to begin listening for client connections from
+    other machines.
+<li><b>t</b> - Talk.  Sends a message to other players during a
+    network game.  The player is prompted for the message to send.
+<li><b>T</b> - Joystick throttle.  Toggles the use of the joystick
+    throttle, if one is available.  When the joystick throttle is active,
+    moving the throttle forward applies forward thrust and moving the
+    throttle backward applies negative thrust.  To apply zero thrust,
+    the throttle must be centered within the "dead zone".
+<li><b>u</b> - Lock.  Locks the nearest visible enemy ship, planet
+    (or moon), or friendly object, depending on the current lock type.
+<li><b>U</b> - Users.  List all players in a network game.  <b>F1</b>
+    does the same thing.
+<li><b>v</b> - View lock.  Toggles view locking.  When the view is
+    locked, the player's viewing direction is always set to the
+    currently locked planet or target.
+<li><b>w</b> - Weapon.  Selects the next weapon and makes it the
+    current weapon.
+<li><b>x</b> - Textures.  Toggles the use of texture mapping on
+    planets and rings.  Textures look really cool, but turning them
+    off can really boost the performance of certain OpenGL
+    implementations.
+<li><b>y</b> - Next target.  Advances the locked target to the next
+    visible target, if one exists.
+<li><b>Y</b> - Previous target.  Selects the previous target as the
+    locked target.
+<li><b>1, 2, 3, 4</b> - Immediately select the indicated weapon.
+<li><b>]</b> - Next waypoint.  In some missions there will be
+    predetermined points of interest which you can select using the
+    waypoint keys.
+<li><b>[</b> - Previous waypoint.
+<li><b>&lt</b>,<b>&gt</b> - Adjust the field of view.
+<li><b>{</b>,<b>}</b> - Adjust the near clipping plane.
+<li><b>(</b>,<b>)</b> - Adjust the far clipping plane.
+</ul>
+
+<a name=5>
+<h2>Heads Up Display (HUD)</h2>
+<p>
+The HUD shows all sorts of useful information as shown here:
+<p>
+<img src=hud.gif>
+<p>
+<ol>
+<li>Throttle.  Shows the amount of forward thrust (green) or reverse
+    thrust (red) currently being applied.  The number is the ship's
+    current velocity in kilometers per second.  If the number is
+    green, the ship is moving forward (<i>into</i> the screen).  If
+    it's red, the ship is moving backward.  The velocity will be a
+    blue zero if the ship is perfectly at rest.
+<li>Radar.  The radar shows the <b>direction</b> to each planet, and
+    to each nearby moon, object, and missile.  Objects near the center
+    of the radar are toward the front of the ship, while objects near
+    the edge of the radar are behind the ship.
+    Planets are shown as blue dots, moons are shown as cyan (light
+    blue), missiles are shown as small yellow dots, enemies are
+    shown as red dots, and friendlies are shown as green dots.  The
+    currently locked object is shown as a slightly larger dot.  The
+    current waypoint, if any, is shown as a white dot.
+<li>Shield status.  Shows the condition of your ship's shields.  Full,
+    undamaged shields are shown as a bright green bar.  As the shields
+    take damage, the bright part of the bar gets smaller.  As the
+    shields receive considerable damage, the indicator turns yellow,
+    then red.
+<li>Enemy shield status.  Shows the shield status of the currently
+    locked enemy.
+<li>Weapon.  Shows the name of the current weapon.  If the weapon is
+    recharging, the text will be grey.  If the weapon is ready to fire,
+    the text will be magenta.
+<li>Target.  Shows the name and range, in kilometers, of the
+    currently locked target.  Friendly targets are shown in green,
+    enemy targets in red, planets in blue, and moons in light blue.
+<li>Waypoint.  Shows the number and range of the currently selected
+    waypoint, if any.
+</ol>
+There are several other useful indicators which can appear in the actual
+viewing area of the screen:
+<p>
+<ul>
+<li><img src=center.gif>  The center indicator.  This appears in the
+    center of the screen.  It indicates the direction your ship is
+    currently facing, and the general direction in which your weapons will
+    travel.
+<li><img src=forward.gif> The forward motion cursor.  This shows you
+    the direction your ship is traveling.  Since the flight model
+    is based on Newtonian mechanics, your ship is not necessarily
+    traveling in the same direction you are facing.  If your ship
+    is at rest, or if you are using the arcade flight model, the motion
+    cursors are not displayed.
+<li><img src=backward.gif> The backward motion cursor.  This shows the
+    point your ship is moving <b>away</b> from.
+<li><img src=aim.gif> The aiming cursor.  This shows you where to aim
+    to take a shot likely to hit the targetted object.  The directions
+    and velocities of you and the target are taken into account, as
+    well as the velocity of the current weapon.  The aiming cursor is
+    only displayed if the target is within range of the current
+    weapon.
+<li><img src=waypoint.gif> The waypoint cursor.  This indicator shows
+    the direction to the currently selected waypoint.
+</ul>
+
+<p>
+<a name=6>
+<h2>Weapons</h2>
+<p>
+
+Your ship is equipped with a number of weapons which differ with respect
+to a number of characteristics:
+
+<ul>
+<li>Recharge time.  All weapons, after being fired, need some time to
+    recharge before they can be fired again.  The shorter the recharge
+    time, the more rapidly the weapon can be fired.  In general, more
+    powerful weapons require more time to recharge.
+<li>Yield.  Weapons differ in the amount of damage they cause when
+    hitting an enemy.  Weapons with larger yield cause more damage.
+<li>Range.  Some weapons are only effective at short distances, while
+    others can hit targets much further away.
+<li>Velocity.  Some weapons travel very quickly while others are slow.
+</ul>
+
+<p>
+You will want to experiment with the different weapons to decide which
+weapon is best for each specific situation.
+
+<p>
+<a name=6a>
+<h2>Shields</h2>
+<p>
+Your ship, and the ships of enemy pilots, are protected by shields.
+The shields can absorb a considerable amount of destructive energy
+before that energy can damage or destroy the protected ship.  If you
+receive damage greater than the amount your shields can currently absorb,
+your ship is destroyed.
+<p>
+Shields automatically regenerate.  Damaged shields will eventually
+return to complete capacity as long as they receive no additional
+damage.
+<p>
+The status of your ship's shields and the shields of the currently
+locked target are displayed on your HUD.
+
+<p>
+<a name=8>
+<h2>The Preferences File</h2>
+<p>
+
+ORBIT remembers many of the different options you control, such as
+whether the HUD is displayed and the density of the star field.
+These preferences are stored in a file named <b>prefs.txt</b>, located
+in the directory where you installed ORBIT.  (If you're running under
+Unix, the file is stored in your current working directory when you
+execute the program.)
+<p>
+In addition, there are some options which are stored in the preferences
+file but which <i>cannot</i> be controlled from within the program.  To
+manipulate these options, you must edit the preferences file directly.
+<p>
+Of particular note is the <b>mission</b> directive in the preferences
+file.  This is the name of the current mission.  If you want to change
+which mission you want to fly, or want to try flying a custom-designed
+mission, you will need to change the value of this directive before
+starting the game.
+<p>
+The preferences file consists of a number of text lines, with two fields
+per line.  The first field is the name of a directive and the second
+field is the value of that directive.
+<p>
+Here is a complete list of directives in the preferences file.
+Directives that you cannot control from within the game are marked with
+an asterisk (*).
+<p>
+<ul>
+<li><b>vulnerable</b> - Controls whether your ship is vulnerable to
+damage.  A value of zero means you're invulnerable, one means you are
+vulnerable.
+<li><b>joy_throttle</b> - Zero means the joystick throttle is ignored;
+one means it is honored.
+<li><b>deadzone</b> (*) - Defines the joystick "dead zone", which is that
+    area near the center of the joystick's range of motion in which movement
+    will be ignored.  The dead zone is specified as a fraction between
+    0.0 and 1.0.  The default is 0.1, which means that movement within
+    the centermost tenth of the joystick's range will be ignored.
+<li><b>starfield</b> - Controls the density of the star field.  Zero
+means no star field, one means sparse, two means dense.
+<li><b>drawhud</b> - Zero means no HUD, one means display the HUD.
+<li><b>showfps</b> - Zero means don't display the frame rate, one means
+    do display the frame rate.
+<li><b>gravity</b> - Zero means no gravity, one means gravity is on.
+<li><b>junk</b> - Zero means no space junk, one means space junk is
+displayed.
+<li><b>sound</b> - Zero means no sound, one means sound is on.
+<li><b>show_names</b> - Zero means object names are not displayed, one
+means name are displayed.
+<li><b>screen_shot_num</b> (*) - The number that will be used in the file
+name of the next screen shot.
+<li><b>mission</b> (*) - The file name of the current mission.
+<li><b>rings</b> - Zero means don't draw planetary rings, one means draw
+them.
+<li><b>ring_sectors</b> (*) - Defines the number of sectors used to render
+    the planetary rings.  More sectors will result in more realistic
+    rings but will slow the game down.  The default is 32 sectors.
+<li><b>textures</b> - Zero means no planet textures, one means use
+textures.
+<li><b>realdistances</b> (*) - In the interest of playability, by default
+    the solar system in ORBIT has been shrunk by a factor of ten (more
+    in the outer solar system).  If realdistances is set to one, more
+    accurate distances will be used.  However, this can mean very long
+    travel times between planets.
+<li><b>mouse_control</b> - Zero means ignore the mouse, one means use
+the mouse to control direction.
+<li><b>mouse_flipx</b> (*) - Set to 1 to reverse the direction of mouse
+    control in the X dimension.
+<li><b>mouse_flipy</b> (*) - Set to 1 to reverse the direction of mouse
+    control in the Y dimension.
+<li><b>weapon</b> - The number, from zero to four, of the current
+weapon.
+<li><b>flightmodel</b> - Zero means use the default, Newtonian flight
+    model, one means the arcade model.
+<li><b>screenwidth</b> (*) - The screen width in pixels.
+<li><b>screenheight</b> (*) - The screen height in pixels.
+<li><b>fullscreen</b> (*) - One means that ORBIT will try to use the entire
+screen.
+<li><b>gamemode</b> (*) - Allows you to control the resolution, bits per
+pixel, and refresh rate that ORBIT will attempt to use.  For example, a
+value of 640x480:16@60 means a resolution of 640 by 480 pixels, a color
+depth of 16 bits per pixel, and a refresh rate of 60 hertz.
+<blockquote>
+<i>Not all OpenGL drivers will support all resolutions.  You may need to
+experiment with the <b>screenwidth, screenheight, fullscreen</b>, and
+<b>gamemode</b> directives to get optimal performance from your
+driver.</i>
+</blockquote>
+<li><b>slices0</b> (*) - Specifies the number of slices, or sectors, used
+    to render planets and moons at great distances.
+<li><b>stacks0</b> (*) - Controls the number of horizontal stacks used to
+    render planets and moons at great distances.  Reducing the number
+    of slices and stacks will improve performance but will look less
+    realistic.
+<li><b>slices1</b> (*) - Same as <b>slices0</b>, but for planets at
+    intermediate distances.
+<li><b>stacks1</b> (*) - Same as <b>stacks0</b>, but for planets at
+    intermediate distances.
+<li><b>slices2</b> (*) - Same as <b>slices0</b>, but for planets at
+    small distances.
+<li><b>stacks2</b> (*) - Same as <b>stacks0</b>, but for planets at
+    small distances.
+<li><b>name</b> - The player's name.  Cannot contain spaces.
+<li><b>model</b> (*) - The spaceship model used to display the
+    player's ship in network games.
+<li><b>fov</b> - The Field Of View, in degrees.
+<li><b>draw_orbits</b> - Set to 1 to draw planetary orbits.
+<li><b>orbit</b> - Set to 1 to enable orbital motion.
+<li><b>compression</b> - Time compression.
+<li><b>fullstop</b> (*) - Set to 1 to enable use of the space bar for
+    full stop, 0 to disable full stop.  (Full stop is a gross violation
+    of the laws of physics, so some people prefer to play without it.)
+    <b>Important:</b>  Don't play missions with full stop disabled.  You
+    won't be able to completely stop the ship to dock with objects.
+<li><b>superwarp</b> (*) - Set to 1 to enable the original behavior of the
+    warp engines (100 times the regular engines).  Set to 0 to enable
+    exponential acceleration, in which velocity increases are determined
+    by the current velocity.  Superwarp is always disabled in network
+    games.
+<li><b>port</b> (*) - Sets the TCP port the server will listen on.  The
+    default is port 2061.
+</ul>
+<p>
+
+<a name=8a>
+<h2>The Log File</h2>
+<p>
+
+Every time ORBIT runs it creates a log file named <b>orbit.log</b>.  The
+log file is created in the same directory in which ORBIT was installed
+(or the current working directory on Unix machines).
+<p>
+
+The log file contains all sort of useful information about things which
+occur while the game is running.  If the game behaves oddly, if you
+think you've discovered a bug, or if you're trying to debug a
+complicated mission file, the log file is the first place you should
+look to help determine the problem.
+<p>
+
+If you wish to report a bug, you should include the <b>orbit.log</b>
+file from a session which demonstraties the problem.
+
+<p>
+<a name=8b>
+<h2>Network Play</h2>
+<p>
+
+Up to sixteen players can participate in a network game.
+<p>
+
+To set up a network game, you need to have ORBIT installed on at least
+two computers which can communicate via TCP/IP (most likely using the
+Internet).  One computer is designated as the <i>server</i>, and the
+rest of the participants are designated as <i>clients</i>.  <b>You will
+need to know the IP address of the server</b> before setting up a
+network game.
+<p>
+
+Here are the specific steps to set up a network game:
+<ol>
+<li>Be sure all participants know the IP address of the server machine.
+<li>Start up ORBIT on all participant's machines.
+<li>On the server machine, type <b>S</b> (upper-case 'S').  This makes
+    the machine an ORBIT server.
+<li>On each client, type <b>C</b> (upper-case 'C'), enter the IP
+    address of the server, and press <b>return</b>.  This will
+    connect the client to the server.
+<li>Go frag some butt, Sparky!
+<li>To end a network game, type <b>C</b> again on a client to disconnect
+    that client from the game, or type <b>S</b> again on the server to
+    disconnect all clients.
+</ol>
+<p>
+
+Here are some points to keep in mind regarding network play:
+<ul>
+<li>The playability of a network game is directly related to the speed
+    and quality of the network connections between participants.  A
+    slow or unreliable network connection will result in degraded play.
+<li>The framerate on the server machine has a strong impact on the
+    quality of play.  Ideally, the server should be the most powerful
+    machine in a game, and should have the best network connection.
+    (In particular, <i>upstream</i> bandwidth from the server is
+    important.)  It is also worth considering improving the performance
+    of the server by doing things like turning off space junk, turning
+    off the starfield, disabling textures, etc.
+<li>In a network game, the server has control of gravity, planetary
+    orbits, full stop toggle, and flight model.  The commands to
+    change these things are disabled on network clients during a game.
+<li>There are no missions in a network game (yet).
+<li>By default, clients communicate to servers on TCP port 2061.  But
+    the port can be changed if necessary (perhaps due to a firewall
+    restriction):
+    <ul>
+    <li>On the server, use the <b>port</b> preferences variable to
+        specify the port to listen on (port 80 might be a good choice).
+    <li>On the clients, when entering the IP address of the server,
+        follow the address with a space, then the new port number.
+    </ul>
+<li>If a client cannot connect to the server for any reason (the server
+    is down, there is a firewall problem, the IP address was entered
+    incorrectly), the client will appear to freeze for a while, until
+    the connection attempt times out.
+</ul>
+<p>
+
+To make it easier to find opponents in a network game, it is possible
+to lock on to enemy targets regardless of their distance.  In normal
+mission play, only nearby targets can be locked.
+<p>
+
+The player name used in network displays is controlled by the
+<b>name</b> preferences variable, and the spaceship model is controlled
+by the <b>model</b> variable.
+
+<p>
+<a name=9>
+<h2>The Mission File</h2>
+<p>
+
+<a name=9.1>
+<h3>Introduction</h3>
+<p>
+
+ORBIT is based on the concept of a <i>mission</i>.  The player is
+presented with specific objectives which must be met for a mission to be
+successful.  The objectives vary for each mission, and depending on the
+player's performance, different subsequent missions can be assigned.
+<p>
+
+Each mission in ORBIT is controlled by a <i>mission file</i>.  The
+mission file is a simple text file which controls the placement of
+objects, the objectives of a mission, and events which may take place
+during a mission.  <b>All mission files are expected to be found in the
+<i>missions</i> subdirectory.</b>
+<p>
+
+When the game is run, the value of the <b>mission</b> directive in the
+preferences file determines the mission to be loaded.  If the
+preferences file does not exist or does not contain the <b>mission</b>
+directive, the default mission <b>train01.msn</b> is loaded.
+<p>
+
+<a name=9.2>
+<h3>Format</h3>
+<p>
+The mission file consists of <i>tokens</i> separated by <i>white
+space</i>.  White space is spaces, tabs, and newlines.  A variety of
+tokens control all aspects of the mission being defined.  Line breaks
+are ignored; you may break lines anywhere you like, as long as you do so
+between tokens.
+<p>
+
+Some tokens require extended arguments which must be enclosed in braces
+(<b>{</b> and <b>}</b>).  <b>The braces must be surrounded by white
+space.</b>  For example, this is a valid statement:
+<pre>
+        Cursor { Earth +10000 }
+</pre>
+but this <b>IS NOT VALID</b>:
+<pre>
+        Cursor {Earth +10000}                (BAD!!!)
+</pre>
+<p>
+
+Comments may be included anywhere in the mission file by beginning the
+comment with <b>/*</b> and ending with <b>*/</b>.  These tokens must
+also be surrounded by white space.
+<p>
+
+The mission loader is fairly forgiving and will ignore most errors (but
+an error message will be printed).  If you are designing a mission and
+it isn't working the way you expect, the loader may be ignoring a
+simple error in the mission file.
+<p>
+
+Tokens are case-insensitive.  That is, <b>Event</b> is the same as
+<b>event</b> is the same as <b>EVENT</b>.
+<p>
+
+A great way to learn about missions is to examine the mission files
+included in the distribution.  They are in the <b>missions</b>
+subdirectory and can be viewed with any text editor, like Notepad.
+<p>
+
+What follows is an exhaustive list of all the tokens along with
+descriptions and examples.
+<p>
+
+<a name=9.3>
+<h3>Cursor</h3>
+<p>
+
+Quite often while defining a mission you will need to refer to a
+position in space.  Rather than have separate commands for the locations
+of objects, events, etc., the mission loader uses the concept of a
+<i>mission cursor</i>, a location in three-dimensional space.  Whenever
+a token needs a location, it uses the current value of the mission
+cursor.
+<p>
+
+You manipulate the mission cursor with the <tt>Cursor</tt> token, which
+must be followed by a position enclosed in braces.  You may specify absolute
+and relative positions, and may use the names of planets, moons, and
+objects to represent their positions.
+<p>
+
+You specify a position with up to four parameters:  The (optional) name
+of a planet, moon, or object, followed by up to three coordinates (x, y,
+and z).  If the coordinates begin with a + or -, they are interpreted as being
+relative to the current mission cursor, otherwise they are interpreted as
+absolute coordinates.  Coordinates are specified in units of kilometers.
+<p>
+
+Here are some examples:
+<p>
+
+Set the mission cursor to the position of Earth:
+<pre>
+        Cursor { Earth }
+</pre>
+
+Set the mission cursor to the position of Earth, plus ten thousand
+kilometers in the X direction:
+<pre>
+        Cursor { Earth +10000 }
+</pre>
+
+Set the mission cursor to a few hundred kilometers along each axis
+from the old cursor:
+<pre>
+        Cursor { +300 -200 +400 }
+</pre>
+<p>
+
+If the name of an object is used in the <tt>Cursor</tt> statement, the
+object must have been defined earlier in the mission file.
+
+<a name=9.4>
+<h3>Player</h3>
+<p>
+
+The initial position of the player is controlled by the <tt>Player</tt>
+command.  The player's initial position will be set to the current value
+of the mission cursor.
+<p>
+
+The <tt>Player</tt> token must be followed by braces with only white
+space between them.  In other words it must look like this:
+<pre>
+        Player { }
+</pre>
+<p>
+
+In the absence of the <tt>Player</tt> command, the initial player
+position is inherited from the position at the end of the previous
+mission.
+<p>
+
+<a name=9.5>
+<h3>Object</h3>
+<p>
+
+The <tt>Object</tt> command controls the placement of an object in the
+mission.  Objects may be enemy ships, friendly ships, space stations,
+etc.
+<p>
+
+A complete <tt>Object</tt> description might look like this:
+<pre>
+	Object
+	{
+		Name Fighter1
+		Model light1.tri
+		Score 1
+		Strategy Hunt1
+	}
+</pre>
+
+<b>The object's position is set to the current value of the mission
+cursor.</b>
+<p>
+
+The <tt>Object</tt> token must be followed by a number of parameters
+enclosed in braces.  Each of these parameters, which describe the
+appearance and behavior of the object, are described below:
+<p>
+
+<a name=9.5.1>
+<h4>Name</h4>
+<p>
+The <tt>Name</tt> token assigns a name to an object.  The name will be
+displayed in the HUD when the object is targetted, and may be refered to
+by various events.
+<p>
+
+The format is:
+<pre>
+        Name object-name
+</pre>
+
+Object names are limited to 32 characters and cannot contain white space
+characters.
+<p>
+
+<a name=9.5.2>
+<h4>Model</h4>
+<p>
+
+The appearance of an object is controlled by the <tt>Model</tt> token.
+The value, which must follow the <tt>Model</tt> token, is the name of a
+file found in the <b>models</b> subdirectory.  If the model name ends
+in ".tri", it is assumed to be in the <b>triangle</b> format.  If the
+name ends in ".ac" it is assumed to be in <b>AC3D</b> format.
+<p>
+
+Here's an example:
+<pre>
+	Model platform.tri
+</pre>
+<p>
+
+<a name=9.5.3>
+<h4>Score</h4>
+<p>
+The <tt>Score</tt> specifies the number of points the player receives
+for destroying the object.  The player's score can control events,
+described later.
+<p>
+
+Here's an example:
+<pre>
+	Score 1
+</pre>
+
+<a name=9.5.4>
+<h4>Strategy</h4>
+<p>
+The behavior of an object is controlled by the <tt>Strategy</tt>
+command.  The token is followed by the name of a strategy, like this:
+<pre>
+	Strategy DoNothing
+</pre>
+
+These are the currently available strategies:
+<ul>
+<li><tt>DoNothing</tt> - Just what it says; the object will not move or fire.
+<li><tt>Sit1</tt> - The object will not move, but will fire upon the
+    player if approached.
+<li><tt>Sit2</tt> - Like <tt>Sit1</tt> but a much better aiming
+    algorithm is used.
+<li><tt>Sit3</tt> - Like <tt>Sit1</tt> but the object will fire on the
+    closest enemy object.
+<li><tt>Sit4</tt> - Like <tt>Sit3</tt> but a much better aiming
+    algorithm is used.
+<li><tt>Hunt1</tt> - The object will pursue and fire upon the player,
+    when the player approaches the object.
+<li><tt>Hunt2</tt> - Like <tt>Hunt1</tt> but a much better aiming
+    algorithm is used.
+<li><tt>Hunt3</tt> - Like <tt>Hunt1</tt> but the object will pursue
+    and fire upon the closest enemy object.
+<li><tt>Hunt4</tt> - Like <tt>Hunt3</tt> but a much better aiming
+    algorithm is used.
+</ul>
+<p>
+
+<a name=9.5.5>
+<h4>Hidden</h4>
+<p>
+Objects may be declared to be <i>hidden</i>.  Hidden objects will not
+appear on the HUD, cannot be hit, do not fire, and do not use any
+strategy.  Typically, a hidden object would at some point be unhidden by
+an event.
+<p>
+
+The token takes no arguments:
+<pre>
+	Hidden
+</pre>
+<p>
+
+<a name=9.5.6>
+<h4>Weapon</h4>
+<p>
+By default objects are armed with Weapon number four, which is a weak
+weapon.  Objects may be given a different weapon with the <tt>Weapon</tt>
+command.  The argument is a number from 0 to 9, like this:
+<pre>
+	Weapon 3
+</pre>
+<p>
+
+<a name=9.5.7>
+<h4>Friendly</h4>
+<p>
+Normally, objects behave as enemy objects and attack the player
+according to the <tt>Strategy</tt> they have been assigned.  But you can
+use the <tt>Friendly</tt> token to declare an object to be a friendly
+object.  Friendly and unfriendly objects can be made to attack each
+other by assigning appropriate strategies to the objects.
+<p>
+
+<a name=9.5.8>
+<h4>MaxShields</h4>
+<p>
+<tt>MaxShields</tt> specifies the maximum level of the object's undamaged
+shields.  The default value is 100.  The token is followed by the value
+to be assigned to the maximum shield level:
+<pre>
+	MaxShields 200.0
+</pre>
+<p>
+
+<a name=9.5.9>
+<h4>ShieldRegen</h4>
+<p>
+The rate at which an object's damaged shields regenerate can be controlled
+with the <tt>ShieldRegen</tt> token.  The default is 5.0 units per second.
+Follow the token with the regeneration value:
+<pre>
+	ShieldRegen 2.0
+</pre>
+<p>
+
+<a name=9.5.10>
+<h4>TurnRate</h4>
+<p>
+The rate at which an object turns is specified with the
+<tt>TurnRate</tt> token, which is followed by the turn rate expressed in
+radians per second:
+<pre>
+	TurnRate 0.5
+</pre>
+<p>
+The default turn rate is 0.3 radians per second.
+<p>
+
+<a name=9.5.11>
+<h4>Speed</h4>
+<p>
+An object's acceleration is controlled by the <tt>Speed</tt> token.  The
+default speed is 0.02.  Follow the token with the new speed:
+<pre>
+	Speed 0.04
+</pre>
+<p>
+
+<a name=9.5.12>
+<h4>Invisible</h4>
+<p>
+The <tt>Invisible</tt> token makes an object invisible.  Invisible
+objects do not appear in the HUD or on the viewscreen.  Invisible
+objects can be hit by weapons and can be assigned a strategy.
+<p>
+
+The token takes no arguments:
+<pre>
+	Invisible
+</pre>
+<p>
+
+<a name=9.6>
+<h3>Briefing</h3>
+<p>
+Once a mission is loaded, the player is presented with the <i>mission
+briefing</i>.  The briefing should tersely inform the player of the
+situation and clearly state the mission objectives.
+<p>
+
+The <tt>Briefing</tt> token is followed by the text of the briefing
+inside braces.  You may force a line break in the briefing with a
+backslash (\).  Briefings are limited to 4096 characters, but you should
+keep them short to be sure they can be displayed on small screens.
+<p>
+
+Here's an example briefing:
+<pre>
+        Briefing
+	{
+        	Mission 001:  Lunar Patrol\\
+        	Welcome to the ship, Captain.\\
+        	We have had some reports of enemy activity in orbit above
+        	Earth's Moon.  If the aliens establish a stronghold so close
+        	to the earth it may be impossible to withstand an attack.\\
+        	Your mission is to travel to the moon, eliminate any hostile
+        	forces you encounter, and return to the earth.\\
+        	Briefing concluded.  Godspeed!\\
+	}
+</pre>
+<p>
+
+<a name=9.8>
+<h3>Verbose</h3>
+<p>
+The mission loader can print lots of useful diagnostic information.  To
+receive all such messages, turn on verbose reporting with the
+<tt>Verbose</tt> token, which should appear near the top of the mission
+file.
+<p>
+
+The <tt>Verbose</tt> token takes no arguments:
+<pre>
+	Verbose
+</pre>
+<p>
+
+<a name=9.9>
+<h3>Terse</h3>
+<p>
+To turn off verbose reporting from the mission loader, use the
+<tt>Terse</tt> command, which takes no arguments:
+<pre>
+	Terse
+</pre>
+<p>
+
+<a name=9.10>
+<h3>Event</h3>
+<p>
+
+In order to make more interesting missions it's possible to define
+<i>events</i>.  The mission situation can be changed by events when
+certain circumstances occur.  You can give messages to the player when a
+certain object is approached or destroyed, new objects can be created in
+response to mission conditions, etc.  There are many possibilities which
+allow you to create rich, complex missions.
+<p>
+
+Events can also be used to load other missions depending on
+circumstances.  This allows you to create vast, branching campaigns in
+which the story line is directly affected by the player's performance.
+<p>
+
+Each event has a <i>trigger</i> and up to 64 <i>actions</i>.  The
+condition which causes the event to occur is the trigger.  The things
+that happen as a result of the event are the actions.
+<p>
+
+The <tt>Event</tt> token is followed by the definition of the event
+enclosed in braces.  The definition consists mostly of token-value
+pairs, where the token is the name of some aspect of the event, and the
+value is the value to be assigned to that aspect.
+<p>
+
+Each event can occur at most once.  When an event has occurred, it is
+marked as inactive and cannot occur again.
+<p>
+
+Each event has a position associated with it, even though the particular
+event may not make use of the position.  The position assigned to an
+event is taken from the current mission cursor.
+<p>
+
+A complete event definition might look like this:
+<pre>
+	Event
+	{
+		Name e1
+
+		Trigger Approach
+		Value 10000
+
+		Action Message
+		Value
+		{
+			Welcome home!
+		}
+	}
+</pre>
+
+This event will cause the message "Welcome home!" to be displayed when
+the player moves to within 10000 kilometers of the current mission
+cursor.
+<p>
+
+Descriptions and examples of all the supported event tokens follow:
+<p>
+
+<a name=9.10.1>
+<h4>Name</h4>
+<p>
+
+An event can be assigned a name using the <tt>Name</tt> token.  The
+token is followed by the name of the event, like this:
+<pre>
+	Name e1
+</pre>
+Event names cannot contain white space.
+<p>
+
+In general you do not need to name an event.  However, if you intend to
+refer to the event from another event, most likely with an
+<tt>Enable</tt> or <tt>Disable</tt> action (described below), then you
+need to give the event a name.
+<p>
+
+<a name=9.10.2>
+<h4>Trigger</h4>
+<p>
+
+The specific condition which will cause an event to occur is specified
+using the <tt>Trigger</tt> token.  The token is followed by the name of
+the type of trigger.  An example might be:
+<pre>
+	Trigger Approach
+</pre>
+This statement makes this event triggered by the player's approach to a
+certain point.
+<p>
+
+Descriptions and examples of each of the trigger types follow:
+<p>
+
+<a name=9.10.2.1>
+<h5>Approach</h5>
+<p>
+
+An event with a trigger type of <tt>Approach</tt> will occur when the
+player comes within a specified distance from a specified point.
+<p>
+
+The point to be approached is set to the current mission cursor.
+<p>
+
+The distance is specified with the <tt>Value</tt> token, which must
+immediately follow the <tt>Trigger</tt> statement, like this:
+<pre>
+	Trigger Approach
+	Value 20000
+</pre>
+
+This event will occur when the player approaches within 20000 kilometers
+of the current mission cursor.
+<p>
+
+<a name=9.10.2.2>
+<h5>Depart</h5>
+<p>
+
+<tt>Depart</tt> is the opposite of <tt>Approach</tt>.  An event with a
+trigger type of <tt>Depart</tt> will occur the first time the player
+moves further than a specified distance from a specified point.
+<p>
+
+Like the <tt>Approach</tt> trigger, the point in space comes from the
+current mission cursor, and the distance is specified with the
+<tt>Value</tt> token:
+<pre>
+	Trigger Depart
+	Value 100000
+</pre>
+<p>
+
+<a name=9.10.2.3>
+<h5>True</h5>
+<p>
+
+An event with a trigger type of <tt>True</tt> will occur the first time
+it is checked.  Unless the event has been disabled, it will occur as
+soon as the mission begins.
+<p>
+
+There is no value associated with a trigger type of <tt>True</tt>:
+<pre>
+	Trigger True
+</pre>
+<p>
+
+<a name=9.10.2.4>
+<h5>Score</h5>
+<p>
+
+An event with a trigger type of <tt>Score</tt> will occur the first time
+the player's score is greater than or equal to a specified amount.
+<p>
+
+The amount to compare is specified with the <tt>Value</tt> token:
+<pre>
+	Trigger Score
+	Value 10
+</pre>
+<p>
+
+This event will occur the first time the player's score equals or
+exceeds 10.
+<p>
+
+<a name=9.10.2.5>
+<h5>Destroy</h5>
+<p>
+
+An event can be triggered when a specified object is destroyed.  The
+name of the object (specified with the <tt>Name</tt> token in the
+<tt>Object</tt> definition) must be given with the <tt>Value</tt> token:
+<pre>
+	Trigger Destroy
+	Value fighter1
+</pre>
+<p>
+
+This event will occur when the object named <tt>fighter1</tt> is
+destroyed.
+<p>
+
+<a name=9.10.2.6>
+<h5>Alarm</h5>
+<p>
+
+An event can be scheduled to occur when a given number of seconds has
+elapsed.  The number of seconds is given with the <tt>Value</tt> token:
+<pre>
+	Trigger Alarm
+	Value 30.0
+</pre>
+<p>
+
+Unless this event has been disabled, it will occur 30 seconds after the
+start of the mission.  If it has been disabled, it will occur 30 seconds
+after it is enabled.
+<p>
+
+<a name=9.10.2.7>
+<h5>StopNear</h5>
+<p>
+
+Similar to the <tt>Approach</tt> trigger, an event with a trigger type
+<tt>StopNear</tt> will occur when the player has approached a certain
+point <i>and come to a full stop</i>.
+<p>
+
+The point comes from the mission cursor, and the distance comes from the
+<tt>Value</tt> token:
+<pre>
+	Trigger StopNear
+	Value 2000
+</pre>
+<p>
+
+This event will be triggered with the player comes to a full stop within
+2000 kilometers of the current mission cursor.
+<p>
+
+<a name=9.10.2.8>
+<h5>Shields</h5>
+<p>
+
+An event with a trigger of type <tt>Shields</tt> will occur the first
+time the specified object's shields drop below a certain value.  The
+name of the object and the value must follow the token in braces:
+<pre>
+	Shields { Fighter1 50 }
+</pre>
+<p>
+
+This event will occur when the shields of the object named
+<tt>Fighter1</tt> drop below 50 units.
+<p>
+
+<a name=9.10.3>
+<h4>Action</h4>
+<p>
+
+The things that happen when an event occurs are specified with
+<tt>Action</tt> tokens.  An event can have up to 64 actions.  All of
+an event's actions take place when the conditions specified in the
+event's <tt>Trigger</tt> are met.
+<p>
+
+The type of action must follow the <tt>Action</tt> token.  A complete
+action specification might look like this:
+<pre>
+	Action Message
+	Value
+	{
+		One more to go!
+	}
+</pre>
+<p>
+
+This will cause the message "One more to go!" to be displayed when the
+event's trigger condition is met.
+<p>
+
+Descriptions of all the possible action types follow:
+<p>
+
+<a name=9.10.3.1>
+<h5>Message</h5>
+<p>
+
+The <tt>Message</tt> action causes the specified message to be displayed
+on the player's screen when the event's trigger condition is met.
+<p>
+
+The text of the message is specified using the <tt>Value</tt> token,
+enclosed in braces, like this:
+<pre>
+	Action Message
+	Value
+	{
+		Go get 'em Sparky!
+	}
+</pre>
+<p>
+
+This will cause the message to be displayed when the event's trigger
+condition is met.
+<p>
+
+You can insert line breaks in the message using a backslash (\).
+<p>
+
+<a name=9.10.3.2>
+<h5>Hide</h5>
+<p>
+
+A <tt>Hide</tt> action causes an object to be hidden.  Hidden objects
+behave as if they had been declared <tt>Hidden</tt> in the object
+definition.
+<p>
+
+The name of the object to <tt>Hide</tt> is given with the <tt>Value</tt>
+token:
+<pre>
+	Action Hide
+	Value fighter1
+</pre>
+<p>
+
+This action will cause the object with the name <tt>fighter1</tt> to be
+hidden when the event is triggered.
+<p>
+
+<a name=9.10.3.3>
+<h5>Unhide</h5>
+<p>
+
+The opposite of the <tt>Hide</tt> action, the <tt>Unhide</tt> action
+causes a hidden object to become unhidden.
+<p>
+
+The name of the object to <tt>Unhide</tt> is specified with the
+<tt>Value</tt> token:
+<pre>
+	Action Unhide
+	Value fighter1
+</pre>
+<p>
+
+This action will cause the object with the name <tt>fighter1</tt> to be 
+unhidden when the event is triggered.
+<p>
+
+<a name=9.10.3.4>
+<h5>Destroy</h5>
+<p>
+
+When an event with an action of <tt>Destroy</tt> is triggered, the named
+object will be destroyed:
+<pre>
+	Action Destroy
+	Value fighter1
+</pre>
+<p>
+
+When this event is triggered, the object named <tt>fighter1</tt> will be
+destroyed.
+<p>
+
+<a name=9.10.3.5>
+<h5>Score</h5>
+<p>
+
+When an event with an action of type <tt>Score</tt> occurs, the player's
+score is increased by the specified amount (which may be negative).
+<p>
+
+The amount to increase the score is given with the <tt>Value</tt> token:
+<pre>
+	Action Score
+	Value 1
+</pre>
+<p>
+
+This action causes the player's score to be increased by one point.
+<p>
+
+<a name=9.10.3.6>
+<h5>Enable</h5>
+<p>
+
+An action of type <tt>Enable</tt> will cause the specified event to be
+enabled.  The name of the event to enable is given with the
+<tt>Value</tt> token:
+<pre>
+	Action Enable
+	Value e2
+</pre>
+<p>
+
+This action will cause the event named <tt>e2</tt> to be enabled with the
+event is triggered.
+<p>
+
+<a name=9.10.3.7>
+<h5>Disable</h5>
+<p>
+
+An action of type <tt>Disable</tt> will cause the specified event to be
+disabled.  The name of the event to disable is given with the
+<tt>Value</tt> token:
+<pre>
+        Action Disable
+        Value e2
+</pre>
+<p>
+
+This action will cause the event named <tt>e2</tt> to be disabled with the
+event is triggered.
+<p>
+
+<a name=9.10.3.8>
+<h5>Stop</h5>
+<p>
+
+The <tt>Stop</tt> action causes the player's ship to come to a complete
+stop.  This action does not take a value:
+<pre>
+	Action Stop
+</pre>
+<p>
+
+This action will cause the player's ship to come to a full stop when the
+event's trigger condition is met.
+<p>
+
+<a name=9.10.3.9>
+<h5>LoadMission</h5>
+<p>
+
+An event can cause another mission (or even the same mission) to be
+loaded and played.  The mission to be loaded is specified with the
+<tt>Value</tt> token:
+<pre>
+	Action LoadMission
+	Value train04.msn
+</pre>
+<p>
+
+This action will cause the mission file named <b>train04.msn</b> to be
+loaded when the event's trigger condition is met.
+<p>
+
+<a name=9.10.3.10>
+<h5>Boom</h5>
+<p>
+
+The <tt>Boom</tt> action will cause an explosion of the specifed size
+to occur at the position of the current mission cursor.  The size of the
+explosion is specified with the <tt>Value</tt> token:
+<pre>
+	Action Boom
+	Value 1.0
+</pre>
+<p>
+
+An explosion of size 1.0 is a medium-sized explosion.  Greater values
+will cause bigger explosions; lesser values will cause smaller
+explosions.
+<p>
+
+<a name=9.10.3.11>
+<h5>Flash</h5>
+<p>
+
+The <tt>Flash</tt> action causes the screen to flash white for one
+frame.  The token takes no value:
+<pre>
+	Action Flash
+</pre>
+<p>
+
+<a name=9.10.3.12>
+<h5>MoveObject</h5>
+<p>
+
+The <tt>MoveObject</tt> action causes the position of the specified
+object to be moved to the current value of the mission cursor.  The name
+of the object to be moved is specified with the <tt>Value</tt> token:
+<pre>
+	Action MoveObject
+	Value Fighter1
+</pre>
+<p>
+
+<a name=9.10.3.13>
+<h5>MovePlayer</h5>
+<p>
+
+The <tt>MovePlayer</tt> action will change the location of the player to
+the value of the current mission cursor.  The token takes no value:
+<pre>
+	Action MovePlayer
+</pre>
+<p>
+
+<a name=9.10.3.14>
+<h5>MovePlanet</h5>
+<p>
+
+The <tt>MovePlanet</tt> action changes the location of the named planet
+to the value of the current mission cursor.  The token must be followed
+by the name of the planet to move:
+<pre>
+	Action MovePlanet
+	Value Jupiter
+</pre>
+<p>
+
+<a name=9.10.3.15>
+<h5>HidePlanet</h5>
+<p>
+
+The <tt>HidePlanet</tt> action causes the named planet to become hidden,
+just as if the <tt>Hidden</tt> token was used in the planet's
+definition.  The token is followed by the name of the planet to hide:
+<pre>
+	Action HidePlanet
+	Name Jupiter
+</pre>
+<p>
+
+<a name=9.10.3.16>
+<h5>UnhidePlanet</h5>
+<p>
+
+The <tt>UnhidePlanet</tt> action caused the name planet to become
+unhidden.  The name of the planet is specified with the <tt>Value</tt>
+token:
+<pre>
+	Action UnhidePlanet
+	Name Jupiter
+</pre>
+<p>
+
+<a name=9.10.3.17>
+<h5>Betray</h5>
+<p>
+
+The <tt>Betray</tt> action will change the friendly status of the named
+object.  If the object was friendly, it will become an enemy object.  If
+it was an enemy, it will be changed to a friendly object.
+<p>
+
+The name of the object to change is specified with the <tt>Value</tt>
+token:
+<pre>
+	Action Betray
+	Value Fighter2
+</pre>
+<p>
+
+<a name=9.10.4>
+<h4>Value</h4>
+<p>
+
+The <tt>Value</tt> token is used to provide required information to the
+<tt>Trigger</tt> token and many of the <tt>Action</tt> tokens.  The
+token is followed by a number, a name, or text enclosed in braces,
+depending on the particular token it is being used with.
+<p>
+
+When used to specify some text, line breaks may be included in the text
+by using backslashes (\).
+<p>
+
+<a name=9.10.5>
+<h4>Enabled</h4>
+<p>
+
+<a name=9.10.6>
+<h4>Disabled</h4>
+<p>
+
+It can be useful to declare an event to be <i>disabled</i>, and then
+have it enabled at some later point by another event.  The trigger
+conditions of a disabled event are not checked until the event is
+enabled.
+<p>
+
+To declare an event to be disabled, include the <tt>Disabled</tt> token
+in the event definition:
+<pre>
+	Disabled
+</pre>
+<p>
+
+You can declare an event to be <tt>Enabled</tt>, but this is the
+default.
+<p>
+
+<a name=9.11>
+<h3>Planet</h3>
+<p>
+
+The <tt>Planet</tt> command can be used to control the placement and
+appearance of the planets and moons in the game.
+<p>
+
+Here are some things to keep in mind if you plan to start moving planets
+around:
+<p>
+<ul>
+<li>Planetary maps must be in Portable Pixel Map (PPM) "rawbits" format.
+    The images must have a resolution of 256 by 256.  Comments in the
+    PPM header are not supported.
+<li>Planetary maps are expected to be
+    found in the <b>maps</b> subdirectory.
+<li>Between missions the planets are reset to their original
+    characteristics.  If you're creating multiple missions in an
+    altered solar system, you'll need to redefine the planets in
+    each mission file.
+<li>You can move the sun, but the light source for the solar system
+    will always be at the sun's original position.
+<li>You can't change which planets have rings or the textures used to
+    render the rings.
+</ul>
+<p>
+
+The <tt>Planet</tt> token is followed by a number of token-value pairs
+enclosed in braces.  A complete <tt>Planet</tt> definition might look
+like this:
+<pre>
+	Planet
+	{
+		Name Saturn
+		NewName Tralfamadore
+		Map tralfam.ppm
+		Radius 12000.0
+	}
+</pre>
+
+<p>
+What follows is a list of all the tokens which can be used to modify the
+planets:
+<p>
+
+<a name=9.11.1>
+<h4>Name</h4>
+<p>
+
+The <tt>Name</tt> token is used to identify the planet to be modified.
+It must be the first token in the definition of a planet.  The token is
+followed by the existing name of the planet:
+<pre>
+	Name Saturn
+</pre>
+<p>
+This statement specifies that the rest of the planet definition applies
+to the planet currently named <tt>Saturn</tt>.
+<p>
+
+<a name=9.11.2>
+<h4>NewName</h4>
+<p>
+
+The <tt>NewName</tt> token is used to assign a new name to a planet.
+Planet names cannot contain spaces and are limited to 16 characters.
+The token is followed by the new name to be assigned to the planet:
+<pre>
+	NewName Magrathea
+</pre>
+<p>
+This will assign the name <tt>Magrathea</tt> to the planet specified
+with the most recent <tt>Name</tt> directive.
+<p>
+
+<a name=9.11.3>
+<h4>Reposition</h4>
+<p>
+
+You can change the position of a planet with the <tt>Reposition</tt>
+token.  The new position of the planet will be taken from the current
+mission cursor.  The token requires no arguments:
+<pre>
+	Reposition
+</pre>
+<p>
+
+<a name=9.11.4>
+<h4>Hidden</h4>
+<p>
+
+A planet which has been <tt>Hidden</tt> cannot be seen, does not appear
+on the HUD, and cannot be collided with.  A hidden planet effectively
+does not exist.  The token takes no arguments:
+<pre>
+	Hidden
+</pre>
+<p>
+
+<a name=9.11.5>
+<h4>Map</h4>
+<p>
+
+The texture used to render a planet can be controlled with the
+<tt>Map</tt> token, which must be followed by the name of the texture
+file:
+<pre>
+	Map fractal1.ppm
+</pre>
+<p>
+
+This would assign the map file named <b>fractal1.ppm</b> to the planet
+most recently <tt>Name</tt>d.  Map files are expected to be found in the
+<b>maps</b> subdirectory.  Map files must be in the Portable Pixel Map
+(PPM) "rawbits" format, must have a resolution of 256 by 256, and cannot
+contain comments in the PPM header.
+<p>
+
+<a name=9.11.6>
+<h4>Oblicity</h4>
+<p>
+
+The <tt>Oblicity</tt> of a planet is the inclination, in degrees, of its
+equator to its orbital plane.  Most planets have a low oblicity.
+(Earth's is about 23 degrees, Jupiter's is 3 degrees.)  An oblicity of
+90 degrees would place the planet's poles on the orbital plane.  An
+oblicity of 180 degrees will turn the planet upside down, making it
+appear to rotate backwards.
+<p>
+
+The token is followed by the planet's oblicity in degrees:
+<pre>
+	Oblicity 23.5
+</pre>
+<p>
+
+A planet's moons and rings inherit its oblicity.
+<p>
+
+<a name=9.11.7>
+<h4>Radius</h4>
+<p>
+
+The size of a planet is controlled by its <tt>Radius</tt>.  The token is
+followed by the planet's radius in kilometers:
+<pre>
+	Radius 8000.0
+</pre>
+<p>
+
+The radius of a planet also controls its mass, which is used if gravity
+is turned on.
+<p>
+
+<a name=9.12>
+<h3>Weapon</h3>
+<p>
+
+The weapons in ORBIT can be customized with the <tt>Weapon</tt> token.
+The token is followed by token-value pairs enclosed in braces.  A
+complete <tt>Weapon</tt> specification might look like this:
+<pre>
+	Weapon
+	{
+		Index 2
+		Name BFG9000
+		Speed 1.0
+		Color 0xff0000
+		Yield 30.0
+		Idle 0.1
+		Expire 2.0
+		Renderer 3
+	}
+</pre>
+<p>
+
+Descriptions and examples of all the <tt>Weapon</tt> specifiers follow:
+<p>
+
+<a name=9.12.1>
+<h4>Index</h4>
+<p>
+
+The <tt>Index</tt> token identifies the weapon to be modified.  There
+are ten weapons with indices from zero to nine.  The <tt>Index</tt>
+token is followed by the numeric index of the weapon to be modified:
+<pre>
+	Index 2
+</pre>
+<p>
+
+<a name=9.12.2>
+<h4>Name</h4>
+<p>
+
+The name of a weapon is specified with the <tt>Name</tt> token, which
+must be followed by the new name of the weapon:
+<pre>
+	Name Hyperlaser
+</pre>
+<p>
+
+This will assign the name <tt>Hyperlaser</tt> to the weapon most
+recently identified using the <tt>Index</tt> token.
+<p>
+
+Weapon names are limited to 16 characters and cannot contain white space
+characters.  The name of the weapon appears in the HUD when that weapon
+is selected.
+
+<a name=9.12.3>
+<h4>Speed</h4>
+<p>
+
+The velocity with which a weapon's projectiles travel is specified with
+the <tt>Speed</tt> token, which is followed by the velocity specified in
+kilometers per second:
+<pre>
+	Speed 5000.0
+</pre>
+<p>
+
+<a name=9.12.4>
+<h4>Yield</h4>
+<p>
+
+The amount of damage caused by a weapon's projectile when it strikes a
+target is controlled by the <tt>Yield</tt> token.  The amount of a
+weapon's yield is subtracted from the current value of the target's
+shields.  If the shields are reduced to below zero, the target is
+destroyed.
+<p>
+
+The token is followed by the value of the yield:
+<pre>
+	Yield 30.0
+</pre>
+<p>
+
+<a name=9.12.5>
+<h4>Idle</h4>
+<p>
+
+The <tt>Idle</tt> token specifies the amount of time, in seconds,
+required by a weapon to recharge once it has been fired.  The weapon
+cannot be fired while it is recharging.
+<p>
+
+The token is followed by the idle time in seconds:
+<pre>
+	Idle 0.6
+</pre>
+<p>
+
+<a name=9.12.6>
+<h4>Expire</h4>
+<p>
+
+The <tt>Expire</tt> token is used to specify the amount of time before a
+projectile which has been fired times out.  The <tt>Expire</tt> and
+<tt>Speed</tt> values together determine the range of a weapon.
+<p>
+
+The token is followed by the expiration time in seconds:
+<pre>
+	Expire 3.0
+</pre>
+<p>
+
+<a name=9.12.7>
+<h4>Renderer</h4>
+<p>
+
+The appearance of a weapon's projectiles is controlled by the
+<tt>Renderer</tt> token.
+<p>
+
+There are currently five renderers:
+<ul>
+<li>0 - Three line segments at right angles to one another
+<li>1 - Same as 0.
+<li>2 - Elongated quadrilaterals, or rays
+<li>3 - Tetrahedrons
+<li>4 - Random line loops
+</ul>
+<p>
+
+The token is followed by the index of the renderer to be used to draw
+the weapon's projectiles:
+<pre>
+	Renderer 3
+</pre>
+<p>
+
+<a name=9.12.8>
+<h4>Color</h4>
+<p>
+
+The <tt>Color</tt> token controls the color of a weapon's projectiles.
+The red, green, and blue components of the color can be specified as
+six-digit hexadecimal number preceded by "0x".
+<p>
+
+The color specification must follow the <tt>Color</tt> token:
+<pre>
+	Color 0xff8000
+</pre>
+<p>
+
+This specifies a projectile color with a red component of 255
+(hexadecimal <tt>ff</tt>), and green component of 128 (hex <tt>80</tt>)
+and a blue component of zero.
+<p>
+
+<a name=9.13>
+<h3>Include</h3>
+<p>
+
+A mission file can include commands from another file by using the
+<tt>Include</tt> statement, which is followed by the name of the file
+to include, like this:
+<pre>
+	Include fighter.inc
+</pre>
+<p>
+
+Included files are also expected to be in the <b>missions</b>
+subdirectory.  Include files may be nested to 16 levels.
+<p>
+
+<a name=9.14>
+<h3>Waypoint</h3>
+<p>
+
+The <tt>Waypoint</tt> token defines a new waypoint with coordinates
+equal to the current mission cursor.  The token must be followed by
+braces with only white space between them:
+<pre>
+	Waypoint { }
+</pre>
+<p>
+
+<a name=10>
+<h2>Adding New Models</h2>
+<p>
+
+You can easily add new object models to ORBIT, and then include them in
+missions using the <tt>Model</tt> token in an <tt>Object</tt>
+definition.
+<p>
+
+Model files are expected to reside in the <b>models</b> subdirectory.
+<b>Triangle</b> and <b>AC3D</b> format models are supported.  The file
+names of triangle models must end with ".tri" and the names of AC3D
+format models must end with ".ac".
+<p>
+
+The AC3D file format is documented
+<a href=http://www.comp.lancs.ac.uk/computing/users/andy/ac3d/man/ac3dfileformat.html>here</a>.
+The home page for the AC3D modelling program is 
+<a href=http://www.comp.lancs.ac.uk/computing/users/andy/ac3d.html>
+here</a>.  If the AC3D model includes textures, the texture files must
+also reside in the <b>models</b> subdirectory.  Only textures in the SGI
+"rgb" format are supported.
+<p>
+
+A triangle file has one record per triangle in the object.  The line
+contains ten fields.  For example:
+<pre>
+	1.3 -0.5 -0.6  -1.5 -0.5 0.2  1.3 -0.5 0.2  0xCCCCCC
+</pre>
+<p>
+
+The first nine fields are the X, Y, and Z coordinates of the triangle's
+three vertices, in counter-clockwise order as viewed from the exterior
+of the object.  The tenth field is the 24-bit color of the triangle in
+hexadecimal format.
+<p>
+
+Here are some points to keep in mind when adding new models to ORBIT:
+<ul>
+<li>Larger models take longer to render and will slow down the game.
+    If your model is growing to 100 triangles or more you might want
+    to think about simplifying it.
+<li>A small model, like a fighter, should be about two or three units
+    in size.
+<li>The front of the model should point along the X axis, and the top
+    of the model should point along the Y axis.
+<li>Collisions are computed using the <i>bounding box</i> of the model.
+    That is, the model is treated, for the purposes of computing
+    collisions, as a box with dimensions equal to the maximum X, Y, and
+    Z coordinates of the model.  So if you make a model with something
+    sticking out a long way in one direction, collisions with that
+    model may not seem very realistic.
+</ul>
+<p>
+
+<hr>
+<center>
+<a href=index.html>Home</a> |
+<a href=index.html#overview>Overview</a> |
+<a href=index.html#require>System Requirements</a> |
+<a href=documentation.html>Documentation</a> |
+<a href=index.html#contact>Contact Me</a> | 
+<a href=index.html#credits>Credits</a>
+<hr>
+</center>
+
+</body>
+</html>
+
