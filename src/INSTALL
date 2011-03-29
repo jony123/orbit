@@ -1,0 +1,35 @@
+ORBIT -- A Freeware Space Combat Simulator
+
+These are the dependancys that Orbit needs on my netbook
+
+jb@Mini-Me:~/projects/orbit2.0$ ldd orbit
+	linux-gate.so.1 =>  (0xb78c3000)
+	libglut.so.3 => /usr/lib/libglut.so.3 (0xb7879000)
+	libGLU.so.1 => /usr/lib/libGLU.so.1 (0xb7809000)
+	libGL.so.1 => /usr/lib/libGL.so.1 (0xb77a3000)
+	libm.so.6 => /lib/i686/cmov/libm.so.6 (0xb777d000)
+	libX11.so.6 => /usr/lib/libX11.so.6 (0xb765d000)
+	libXext.so.6 => /usr/lib/libXext.so.6 (0xb764e000)
+	libXmu.so.6 => /usr/lib/libXmu.so.6 (0xb7638000)
+	libXt.so.6 => /usr/lib/libXt.so.6 (0xb75e6000)
+	libXi.so.6 => /usr/lib/libXi.so.6 (0xb75d8000)
+	libc.so.6 => /lib/i686/cmov/libc.so.6 (0xb7492000)
+	libstdc++.so.6 => /usr/lib/libstdc++.so.6 (0xb739d000)
+	libgcc_s.so.1 => /lib/libgcc_s.so.1 (0xb737f000)
+	libXxf86vm.so.1 => /usr/lib/libXxf86vm.so.1 (0xb737a000)
+	libXdamage.so.1 => /usr/lib/libXdamage.so.1 (0xb7376000)
+	libXfixes.so.3 => /usr/lib/libXfixes.so.3 (0xb7371000)
+	libdrm.so.2 => /usr/lib/libdrm.so.2 (0xb7367000)
+	libpthread.so.0 => /lib/i686/cmov/libpthread.so.0 (0xb734e000)
+	libdl.so.2 => /lib/i686/cmov/libdl.so.2 (0xb734a000)
+	/lib/ld-linux.so.2 (0xb78c4000)
+	libxcb.so.1 => /usr/lib/libxcb.so.1 (0xb7330000)
+	libSM.so.6 => /usr/lib/libSM.so.6 (0xb7328000)
+	libICE.so.6 => /usr/lib/libICE.so.6 (0xb7311000)
+	librt.so.1 => /lib/i686/cmov/librt.so.1 (0xb7308000)
+	libXau.so.6 => /usr/lib/libXau.so.6 (0xb7305000)
+	libXdmcp.so.6 => /usr/lib/libXdmcp.so.6 (0xb72ff000)
+	libuuid.so.1 => /lib/libuuid.so.1 (0xb72fb000)
+jb@Mini-Me:~/projects/orbit2.0$ 
+(Running debian testing as of 29 March 2011)
+

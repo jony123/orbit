@@ -14,13 +14,13 @@
 #define HAVE_INTTYPES_H 1
 
 /* Define to 1 if you have the `GL' library (-lGL). */
-#define HAVE_LIBGL 1
+/* #undef HAVE_LIBGL */
 
 /* Define to 1 if you have the `GLU' library (-lGLU). */
-#define HAVE_LIBGLU 1
+/* #undef HAVE_LIBGLU */
 
 /* Define to 1 if you have the `glut' library (-lglut). */
-#define HAVE_LIBGLUT 1
+/* #undef HAVE_LIBGLUT */
 
 /* Define to 1 if you have the `m' library (-lm). */
 #define HAVE_LIBM 1
@@ -35,7 +35,7 @@
 #define HAVE_LIBXI 1
 
 /* Define to 1 if you have the `Xmu' library (-lXmu). */
-#define HAVE_LIBXMU 1
+/* #undef HAVE_LIBXMU */
 
 /* Define to 1 if you have the `Xt' library (-lXt). */
 #define HAVE_LIBXT 1
