@@ -1,74 +1,201 @@
-<!DOCTYPE html>
 <html>
+<head>
+<title>ORBIT -- A Freeware Space Combat Simulator</title>
+</head>
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Orbit : Orbit - Space Game" />
+<body bgcolor=#ffffff>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+<center>
+<a href=http://www.opengl.org/><img src=OGL_sm.gif border=0></a>
+<h2>ORBIT -- A Freeware Space Combat Simulator</h2>
+<p>
+<i>by Steve Belczyk (orbit@genesis.nred.ma.us)</i>
+<p>
+<hr>
+<a href=#overview>Overview</a> |
+<a href=#require>System Requirements</a> |
+<a href=documentation.html>Documentation</a> |
+<a href=#contact>Contact Me</a> | 
+<a href=#credits>Credits</a>
+</center>
+<hr>
+<p>
+<h3>Version 1.01 is now available!</h3>
+<p>
+<blockquote>
+<ul>
+<li>Multiplayer network support:  Compete with other players over the
+    Internet.
+<li>Direct support for AC3D models:  Easily add third-party object
+    models to the game.
+<li>Planetary orbits.
+<li>Lots of other changes:  Here's the <a href=101.html>complete
+    list</a>.
+</ul>
+</blockquote>
 
-    <title>Orbit</title>
-  </head>
+<a name=overview>
+<p>
+<h4>Overview:</h4>
+<blockquote>
+You know the story:  You're the hottest space fighter pilot this side of
+Andromeda.  An evil alien race threatens mankind's freedom to live,
+love, and play Quake 3.  You've got a sleek ship with loads of weapons,
+but this time you're needed to defend our very own solar system.  Go get
+'em Sparky!
+</blockquote>
+<h4>Features:</h4>
+<blockquote>
+<ul>
+<li>Cheap:  ORBIT is completely free!
+<li>Portable:  Available for Windows 95/98, Linux, and any UNIX system with an
+    OpenGL library.
+<li>Multiplayer action and single player, mission-oriented play.
+<li>Pretty realistic:  Newtonian physics and NASA images.
+<li>Extensible:  Easily design and add your own missions, campaigns, and
+    object models.  Create your own planets, moons and solar systems.
+<li>Pretty fast:  30 fps on a Pentium 133/Voodoo 1.  90 fps on a Pentium
+    2/450/Voodoo 2.
+<li>Open source:  All source code is included in the distribution.
+</ul>
+</blockquote>
+<p>
 
-  <body>
+<a name=require>
+<h4>System Requirements:</h4>
+<p>
+<blockquote>
+<ul>
+<li>133 megahertz or better Windows, Linux, or UNIX system.
+<li>Compatible <a href=http://www.opengl.org/>OpenGL</a> driver or
+    library.
+<li>3D hardware acceleration <b>strongly</b> recommended.
+<li>Joystick strongly recommended on supported systems.
+<li>32 megabytes of RAM.
+<li>Ten megabytes of disk space.
+<li>Internet connection for multiplayer play.
+</ul>
+</blockquote>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/jony123/orbit">Fork Me on GitHub</a>
+<a name=contact>
+<h4>Contact me:</h4>
+<p>
+<blockquote>
+Feel free to pop around into #orbit2.0 @ irc.freenode.com (IRC) we are normally
+in there just ask away.
+</blockquote>
+<p>
 
-          <h1 id="project_title">Orbit</h1>
-          <h2 id="project_tagline">Orbit - Space Game</h2>
+<a name=credits>
+<h4>Credits:</h4>
+<p>
+<blockquote>
+Hats off to Steve Belczyk (orbit@genesis.nred.ma.us) for getting orbit this far
+sadly we can't seem to contact him.
+<p>
+(This is people who have helped in the past, fitting to still keep them here.)<br>
+Many people contributed to orbit by providing bug fixes, contributing
+code, offering suggestions for improvement, or play testing the program.
+These generous people include Ian Belczyk, James Lockwood, Joey Hess, 
+Rudy (rdmnsgtn), Daniel Beer, Andrew Roals, Russ Clarke, B. Douglas
+Hilton, Philipp Hahn, and Robert Morse.  Sorry if I left anyone out!
 
-          <section id="downloads">
-            <a class="zip_download_link" href="https://github.com/jony123/orbit/zipball/master">Download this project as a .zip file</a>
-            <a class="tar_download_link" href="https://github.com/jony123/orbit/tarball/master">Download this project as a tar.gz file</a>
-          </section>
-        </header>
-    </div>
+I'm sure theres more to come.  xD
+</blockquote>
+<p>
+<blockquote>
+Learn more about the OpenGL API (Application Programming Interface)
+at <a href=http://www.opengl.org> http://www.opengl.org</a>.
+</blockquote>
+<p>
+<blockquote>
+ORBIT uses Mark J. Kilgard's excellent OpenGL Utility Toolkit (GLUT)
+library as a front-end to many platform-specific functions.  Find GLUT at
+<a href=http://reality.sgi.com/mjk/glut3/glut3.html>
+http://reality.sgi.com/mjk/glut3/glut3.html</a>.
+</blockquote>
+<p>
+<blockquote>
+Most of the development work on ORBIT was done using Brian Paul's
+Mesa 3-D graphics library, a highly portable OpenGL work-alike available
+from <a href=http://www.mesa3d.org>http://www.mesa3d.org</a>.
+</blockquote>
+<p>
+<blockquote>
+The 3dfx driver for Mesa was written by David Bucciarelli and is
+available at (broken) <a href=http://www-hmw.caribel.pisa.it/fxmesa/>
+http://www-hmw.caribel.pisa.it/fxmesa/</a>.
+</blockquote>
+<p>
+<blockquote>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>Welcome to GitHub Pages.</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+The spaceship models in ORBIT were designed using Andy Colebourne's
+AC3D modelling program, available at
+(broken) <a href=http://www.comp.lancs.ac.uk/computing/users/andy/ac3d.html>
+http://www.comp.lancs.ac.uk/computing/users/andy/ac3d.html</a>.
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+We are using blender now.
+</blockquote>
+<p>
+<blockquote>
+The AC3D file loader is based on a program by Steve Baker
+(sjbaker1@airmail.net).
+</blockquote>
+<p>
+<blockquote>
+The TIE fighter model used in one of the screen shots was created by
+Harry H. Chang (doctor_harry@hotmail.com).  It is available, along with
+many other great models, from the Avalon Public 3D Archive at
+(broken) <a href=http://avalon.viewpoint.com>http://avalon.viewpoint.com</a>.
+</blockquote>
+<p>
+<blockquote>
+The data for the background stars is based on data from Raul Alonso's
+ssystem program:  (broken) <a href=http://www1.las.es/~amil/ssystem>
+http://www1.las.es/~amil/ssystem</a>.
+</blockquote>
+<p>
+<blockquote>
+Most of the images used for the realistic planetary textures came from
+these sites:
+<ul>
+<li>Dave Seal's great maps site, <a href=http://maps.jpl.nasa.gov>
+    http://maps.jpl.nasa.gov</a>
+<li>Consty's Planetary Maps Index:
+    <a href=http://www.lancs.ac.uk/postgrad/thomasc1/render/maps.htm>
+    http://www.lancs.ac.uk/postgrad/thomasc1/render/maps.htm</a>
+<li>James Hastings-Trew's site:
+    (broken) <a href=http://www.misterprint.com/planet/Planets.html>
+    http://www.misterprint.com/planet/Planets.html</a>
+<li>Bj&#246;rn J&#243;nsson's site:
+    <a href=http://www.mmedia.is/~bjj/>http://www.mmedia.is/~bjj/</a>
+</ul>
+</blockquote>
+<p>
+<blockquote>
+The data used to generate the textures for the planetary rings came from
+images found on NASA's Planetary Rings Node:
+(broken) <a href=http://ringside.arc.nasa.gov>http://ringside.arc.nasa.gov</a>
+</blockquote>
+<p>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<hr>
+<center>
+<a href=#overview>Overview</a> |
+<a href=#require>System Requirements</a> |
+<a href=documentation.html>Documentation</a> |
+<a href=#contact>Contact Me</a> | 
+<a href=#credits>Credits</a>
+</center>
 
-<h3>Designer Templates</h3>
+<hr>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<address>
+orbit@genesis.nred.ma.us
+(<a href="http://gen.dhs.org/steve1.html">steve belczyk</a>)
+</address>
 
-<h3>Rather Drive Stick?</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact support@github.com and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Orbit maintained by <a href="https://github.com/jony123">jony123</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+</body>
 </html>
