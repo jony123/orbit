@@ -1,0 +1,1 @@
+Cut out the opengl bits and optimise code for the server
