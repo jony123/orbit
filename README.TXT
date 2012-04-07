@@ -9,7 +9,7 @@ For the most current version of the ORBIT documentation, please see
 the ORBIT web site at:
 
         http://genesis.ne.mediaone.net/orbit -old
-        http://data.jonys.info/orbit-1.01/doc/101.html -new project continues here.
+        http://jony123.github.com/orbit/ -new project continues here.
 
 New development using Orbit 1.01 source code has been taken up by jony123 and digit(teknohippie) and is available from git here:
 
